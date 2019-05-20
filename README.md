@@ -1,2 +1,2 @@
-# studentCRMsvnit
-Student CRM for contact data management
+# Contact Data Management System
+Website to manage your contact details flexibly, using Python Backend.
