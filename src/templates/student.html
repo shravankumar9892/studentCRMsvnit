@@ -1,0 +1,37 @@
+<html>
+   <head>
+   	    <title>Enter student information</title>
+   	    <meta charset="UTF-8">
+   	    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai');
+		</style>
+   </head>
+   <body>                
+        <h1 style="font-family: 'Baloo Bhai', cursive;">Student Information</h1>
+		<form action="{{ url_for('addrec') }}" method="POST">
+			<ul>
+				<li>
+						<input id="name" type="text" name="nm" />
+						<label for="name">Name</label>
+				</li>
+				<li>
+						<input id="address" type="text" name="add">
+						<label for="address">Address</label>
+				</li>
+				<li>
+						<input id="city" type="text" name="city" />
+						<label for="city">City</label>
+				</li>
+				<li>
+						<input id="pincode" type="text" name="pin" />
+						<label for="pincode">Pincode</label>
+				</li>
+				<li>
+					    <input type="submit" value="Submit">
+				</li>
+			</ul>
+		</form>
+   </body>
+</html>

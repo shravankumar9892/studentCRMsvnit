@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+   <head>
+      <title>List of Students in SVNIT</title>
+      <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+      <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+      <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styleTable.css')}}">
+      <style type="text/css">
+         @import url('https://fonts.googleapis.com/css?family=Baloo+Bhai');
+         body {
+  background-color: #ddd;
+  background-image: linear-gradient(to bottom, #f3f3f3 50%, #acacac 90%);
+}
+      html {
+  min-height: 100%;
+}
+      </style>
+   </head>
+   <body>
+      <h1 style="font-family: 'Baloo Bhai', cursive;margin-top: 50px;" align="center">Information List</h1>
+      <table>
+         <thead>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
+            <th scope="col">Pincode</th>
+         </thead>
+         
+         {% for row in rows %}
+            <tbody>
+            <tr>
+               <td>{{row["name"]}}</td>
+               <td>{{row["addr"]}}</td>
+               <td> {{ row["city"]}}</td>
+               <td>{{row['pin']}}</td>	
+            </tr>
+            </tbody>
+         {% endfor %}
+      </table>
+      
+      <div align="center"><a href = "\">Return to home page</a></div>
+   </body>
+</html>
+

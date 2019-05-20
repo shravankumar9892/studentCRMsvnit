@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FREE Student CRM of SVNIT</title>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai');
+		#linearColumn { display: flex; flex-direction: column; margin-top: 150px;}
+		body {
+  background-color: #ddd;
+  background-image: linear-gradient(to bottom, #f3f3f3 50%, #acacac 90%);
+}
+		html {
+  min-height: 100%;
+}
+		button {
+			margin: 5px;
+		}
+	</style>
+	<script type="text/javascript">
+    	document.getElementById("addRecord").onclick = function () {
+        	location.href = "http://127.0.0.1:5000/enterview";
+    	};
+    		document.getElementById("viewList").onclick = function () {
+        	location.href = "http://127.0.0.1:5000/list";
+    	};
+	</script>
+</head>
+<body>
+	<div id="linearColumn" align="center">
+		<h1 style="font-family: 'Baloo Bhai', cursive;">FREE Student CRM for SVNIT</h1>
+		<div>
+			<button onclick="location.href = 'http://127.0.0.1:5000/enternew';" type="button" class="btn btn-success" id="addRecord">Add record</button>
+			<button onclick="location.href = 'http://127.0.0.1:5000/list';" type="button" class="btn btn-success" id="viewList">View list</button>
+		</div>
+	</div>
+
+</body>
+</html>
